@@ -9,6 +9,14 @@ Rails.application.routes.draw do
     resources :accounts
   end
 
+  # resources :accounts do
+  #   resources :orders
+  # end
+
+  resources :products do
+    resources :order_items
+  end
+
   root to: "home#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
