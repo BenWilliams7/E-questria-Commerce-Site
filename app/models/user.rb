@@ -6,5 +6,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :username, :email, :password, :presence => true
-  has_many :accounts
+  has_one :account
 end
