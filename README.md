@@ -24,3 +24,6 @@ Things you may want to cover:
 * ...
 
 If we get to it we will add this amazing api for our products: https://derpibooru.org/images.json/
+
+If we want to write a custom rake task:
+http://cobwwweb.com/how-to-write-a-custom-rake-task
