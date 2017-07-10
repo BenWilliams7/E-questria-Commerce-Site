@@ -9,13 +9,6 @@ class ApplicationController < ActionController::Base
     current_user && current_user.admin
   end
 
-  # def authorize
-  #   if !is_admin?
-  #     flash[:alert] = 'You are not authorized to visit that page.'
-  #     redirect_to '/'
-  #   end
-  # end
-
   # Custom parameters / Strong Parameters
   before_action :configure_permitted_parameters, if: :devise_controller?
 

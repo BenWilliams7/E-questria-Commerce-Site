@@ -12,7 +12,7 @@ RailsAdmin.config do |config|
 
   config.authorize_with do |controller|
     unless current_user.try(:is_admin?)
-      flash[:error] = "You are not an admin"
+      flash[:error] = "You are not authorized to visit that page."
       redirect_to '/'
     end
   end
