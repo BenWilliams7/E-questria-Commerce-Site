@@ -10,6 +10,13 @@ RailsAdmin.config do |config|
   # end
   # config.current_user_method(&:current_user)
 
+  config.authorize_with do |controller|
+    unless current_user.try(:is_admin?)
+      flash[:error] = "You are not an admin"
+      redirect_to '/'
+    end
+  end
+
   ## == Cancan ==
   # config.authorize_with :cancan
 

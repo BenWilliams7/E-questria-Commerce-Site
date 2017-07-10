@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+If we get to it we will add this amazing api for our products: https://derpibooru.org/images.json/

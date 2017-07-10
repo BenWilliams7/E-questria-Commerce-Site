@@ -40,7 +40,7 @@ gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'faker'
 gem 'rails_admin'
 gem 'rails_12factor', group: :production
-
+gem 'rest-client'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
