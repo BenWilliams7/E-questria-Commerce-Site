@@ -13,9 +13,14 @@ Rails.application.routes.draw do
   #   resources :orders
   # end
 
-  resources :products do
-    resources :order_items
-  end
+  # resources :orders do
+  #   resources :order_items
+  # end
+
+  resources :products
+
+  resources :order_items
+
 
   resources :home
   root to: "home#index"
