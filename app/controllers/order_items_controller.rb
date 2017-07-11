@@ -1,10 +1,5 @@
 class OrderItemsController < ApplicationController
 
-	# def new
-	# 	@order = current_order
-	# 	@item = @order.order_items.new
-	# end
-
 	def create
 		@account = current_account
 		@order = current_order
@@ -12,7 +7,11 @@ class OrderItemsController < ApplicationController
 		@item = @order.order_items.new(item_params)
 		if @order.save!
 			session[:order_id] = @order.id
-			redirect_to products_path
+			@order_items = @item
+			respond_to do |format|
+				format.html { redirect_to products_path}
+				format.js
+			end
 		end
 	end
 
