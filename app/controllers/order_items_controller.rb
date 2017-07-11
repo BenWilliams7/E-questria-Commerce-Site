@@ -6,12 +6,14 @@ class OrderItemsController < ApplicationController
 	# end
 
 	def create
+		@account = current_account
 		@order = current_order
+		@order.account_id = @account.id
 		@item = @order.order_items.new(item_params)
-		@order.save
-		session[:order_id] = @order.id
-		redirect_to cart_path
-
+		if @order.save!
+			session[:order_id] = @order.id
+			redirect_to cart_path
+		end
 	end
 
 	def destroy
